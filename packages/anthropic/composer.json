@@ -1,0 +1,23 @@
+{
+    "name": "rag-php/anthropic",
+    "description": "RAG-PHP Anthropic adapter — Claude LLM",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "rag-php/core": "^0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RagPhp\\Anthropic\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RagPhp\\Anthropic\\Tests\\": "tests/"
+        }
+    }
+}

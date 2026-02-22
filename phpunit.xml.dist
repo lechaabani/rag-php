@@ -20,6 +20,18 @@
         <testsuite name="Loaders">
             <directory>packages/loaders/tests</directory>
         </testsuite>
+        <testsuite name="Gemini">
+            <directory>packages/gemini/tests</directory>
+        </testsuite>
+        <testsuite name="Ollama">
+            <directory>packages/ollama/tests</directory>
+        </testsuite>
+        <testsuite name="Anthropic">
+            <directory>packages/anthropic/tests</directory>
+        </testsuite>
+        <testsuite name="Mistral">
+            <directory>packages/mistral/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
@@ -27,6 +39,10 @@
             <directory>packages/openai/src</directory>
             <directory>packages/pgvector/src</directory>
             <directory>packages/loaders/src</directory>
+            <directory>packages/gemini/src</directory>
+            <directory>packages/ollama/src</directory>
+            <directory>packages/anthropic/src</directory>
+            <directory>packages/mistral/src</directory>
         </include>
     </source>
 </phpunit>

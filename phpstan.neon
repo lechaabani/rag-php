@@ -5,4 +5,8 @@ parameters:
         - packages/openai/src
         - packages/pgvector/src
         - packages/loaders/src
+        - packages/gemini/src
+        - packages/ollama/src
+        - packages/anthropic/src
+        - packages/mistral/src
     tmpDir: .phpstan.cache

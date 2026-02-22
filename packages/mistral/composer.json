@@ -1,0 +1,23 @@
+{
+    "name": "rag-php/mistral",
+    "description": "RAG-PHP Mistral adapter — Mistral AI Embedder and LLM",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "rag-php/core": "^0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RagPhp\\Mistral\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RagPhp\\Mistral\\Tests\\": "tests/"
+        }
+    }
+}

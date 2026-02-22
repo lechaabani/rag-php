@@ -19,7 +19,11 @@
             "RagPhp\\Core\\": "packages/core/src/",
             "RagPhp\\OpenAI\\": "packages/openai/src/",
             "RagPhp\\PgVector\\": "packages/pgvector/src/",
-            "RagPhp\\Loaders\\": "packages/loaders/src/"
+            "RagPhp\\Loaders\\": "packages/loaders/src/",
+            "RagPhp\\Gemini\\": "packages/gemini/src/",
+            "RagPhp\\Ollama\\": "packages/ollama/src/",
+            "RagPhp\\Anthropic\\": "packages/anthropic/src/",
+            "RagPhp\\Mistral\\": "packages/mistral/src/"
         }
     },
     "autoload-dev": {
@@ -27,14 +31,22 @@
             "RagPhp\\Core\\Tests\\": "packages/core/tests/",
             "RagPhp\\OpenAI\\Tests\\": "packages/openai/tests/",
             "RagPhp\\PgVector\\Tests\\": "packages/pgvector/tests/",
-            "RagPhp\\Loaders\\Tests\\": "packages/loaders/tests/"
+            "RagPhp\\Loaders\\Tests\\": "packages/loaders/tests/",
+            "RagPhp\\Gemini\\Tests\\": "packages/gemini/tests/",
+            "RagPhp\\Ollama\\Tests\\": "packages/ollama/tests/",
+            "RagPhp\\Anthropic\\Tests\\": "packages/anthropic/tests/",
+            "RagPhp\\Mistral\\Tests\\": "packages/mistral/tests/"
         }
     },
     "replace": {
         "rag-php/core": "self.version",
         "rag-php/openai": "self.version",
         "rag-php/pgvector": "self.version",
-        "rag-php/loaders": "self.version"
+        "rag-php/loaders": "self.version",
+        "rag-php/gemini": "self.version",
+        "rag-php/ollama": "self.version",
+        "rag-php/anthropic": "self.version",
+        "rag-php/mistral": "self.version"
     },
     "scripts": {
         "test": "phpunit",
