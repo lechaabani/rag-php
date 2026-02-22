@@ -1,0 +1,24 @@
+{
+    "name": "rag-php/openai",
+    "description": "RAG-PHP OpenAI adapter — Embedder and LLM using OpenAI API",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "rag-php/core": "^0.1",
+        "openai-php/client": "^0.10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RagPhp\\OpenAI\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RagPhp\\OpenAI\\Tests\\": "tests/"
+        }
+    }
+}

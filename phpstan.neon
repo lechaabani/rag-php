@@ -1,0 +1,8 @@
+parameters:
+    level: 9
+    paths:
+        - packages/core/src
+        - packages/openai/src
+        - packages/pgvector/src
+        - packages/loaders/src
+    tmpDir: .phpstan.cache

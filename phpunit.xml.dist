@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         executionOrder="depends,defects"
+         cacheDirectory=".phpunit.cache">
+    <testsuites>
+        <testsuite name="Core">
+            <directory>packages/core/tests</directory>
+        </testsuite>
+        <testsuite name="OpenAI">
+            <directory>packages/openai/tests</directory>
+        </testsuite>
+        <testsuite name="PgVector">
+            <directory>packages/pgvector/tests</directory>
+        </testsuite>
+        <testsuite name="Loaders">
+            <directory>packages/loaders/tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>packages/core/src</directory>
+            <directory>packages/openai/src</directory>
+            <directory>packages/pgvector/src</directory>
+            <directory>packages/loaders/src</directory>
+        </include>
+    </source>
+</phpunit>

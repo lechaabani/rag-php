@@ -1,0 +1,41 @@
+name: Monorepo Split
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  split:
+    name: Split ${{ matrix.package }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - package: core
+            target: rag-php/core
+          - package: openai
+            target: rag-php/openai
+          - package: pgvector
+            target: rag-php/pgvector
+          - package: loaders
+            target: rag-php/loaders
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Split package
+        uses: symplify/monorepo-split-github-action@v2.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.SPLIT_TOKEN }}
+        with:
+          package_directory: packages/${{ matrix.package }}
+          repository_organization: rag-php
+          repository_name: ${{ matrix.package }}
+          user_name: rag-php-bot
+          user_email: bot@rag-php.dev

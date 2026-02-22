@@ -1,0 +1,15 @@
+/vendor/
+/.phpunit.cache/
+/.phpstan.cache/
+/.php-cs-fixer.cache
+/composer.lock
+*.swp
+*.swo
+.idea/
+.vscode/
+.DS_Store
+/docs/node_modules/
+/docs/build/
+/docs/.docusaurus/
+.env
+.env.local

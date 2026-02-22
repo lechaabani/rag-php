@@ -1,0 +1,20 @@
+## Description
+
+<!-- A brief description of the changes in this PR -->
+
+## Type of Change
+
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
+
+## Checklist
+
+- [ ] My code follows the project's coding standards (PSR-12)
+- [ ] I have added tests that prove my fix is effective or my feature works
+- [ ] New and existing unit tests pass locally (`composer test`)
+- [ ] PHPStan level 9 passes (`composer analyse`)
+- [ ] PHP-CS-Fixer passes (`composer cs-check`)
+- [ ] I have updated the documentation accordingly
+- [ ] I have added an entry to CHANGELOG.md
