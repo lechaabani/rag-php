@@ -1,0 +1,59 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * RAG-PHP CLI
+ *
+ * This is a standalone entry point. For framework-integrated commands,
+ * use the Symfony Bundle or Laravel ServiceProvider instead.
+ *
+ * Usage:
+ *   php vendor/bin/rag rag:query "What is RAG?"
+ *   php vendor/bin/rag rag:index ./docs
+ *   php vendor/bin/rag rag:stats
+ *   php vendor/bin/rag rag:test-connection
+ */
+
+use Symfony\Component\Console\Application;
+
+// Find autoloader
+$autoloadPaths = [
+    __DIR__ . '/../../../vendor/autoload.php', // monorepo
+    __DIR__ . '/../vendor/autoload.php',       // standalone
+    __DIR__ . '/../../../../vendor/autoload.php', // installed as dependency
+];
+
+$autoloader = null;
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        $autoloader = $path;
+        break;
+    }
+}
+
+if ($autoloader === null) {
+    fwrite(STDERR, "Could not find autoloader. Run 'composer install' first.\n");
+    exit(1);
+}
+
+require $autoloader;
+
+$application = new Application('RAG-PHP', '0.1.0');
+
+echo <<<'BANNER'
+
+  ██████╗  █████╗  ██████╗       ██████╗ ██╗  ██╗██████╗
+  ██╔══██╗██╔══██╗██╔════╝       ██╔══██╗██║  ██║██╔══██╗
+  ██████╔╝███████║██║  ███╗█████╗██████╔╝███████║██████╔╝
+  ██╔══██╗██╔══██║██║   ██║╚════╝██╔═══╝ ██╔══██║██╔═══╝
+  ██║  ██║██║  ██║╚██████╔╝      ██║     ██║  ██║██║
+  ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝       ╚═╝     ╚═╝  ╚═╝╚═╝
+
+
+BANNER;
+
+// Note: Commands require a configured pipeline.
+// See documentation for standalone CLI setup.
+$application->run();

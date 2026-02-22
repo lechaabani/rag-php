@@ -1,0 +1,25 @@
+# config/packages/rag.yaml
+rag:
+    embedder:
+        provider: openai                          # openai | gemini | ollama | mistral
+        model: text-embedding-3-small
+        api_key: '%env(OPENAI_API_KEY)%'
+
+    vector_store:
+        driver: pgvector                          # pgvector | in_memory
+        table: rag_documents
+        dimensions: 1536
+
+    retriever:
+        strategy: similarity                      # similarity | mmr | hyde | bm25 | hybrid
+        top_k: 5
+
+    llm:
+        provider: openai                          # openai | gemini | ollama | anthropic | mistral
+        model: gpt-4o-mini
+        api_key: '%env(OPENAI_API_KEY)%'
+        temperature: 0.2
+        max_tokens: 2048
+
+    prompt:
+        template: ~                               # null = default template

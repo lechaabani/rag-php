@@ -30,6 +30,21 @@ const sidebars = {
     },
     'pipeline',
     'events',
+    {
+      type: 'category',
+      label: 'Frameworks',
+      items: ['frameworks/symfony', 'frameworks/laravel'],
+    },
+    {
+      type: 'category',
+      label: 'Cookbook',
+      items: [
+        'cookbook/chatbot',
+        'cookbook/search-engine',
+        'cookbook/local-ollama',
+        'cookbook/multi-provider',
+      ],
+    },
     'testing',
     'contributing',
   ],

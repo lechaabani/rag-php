@@ -1,0 +1,35 @@
+{
+    "name": "rag-php/laravel",
+    "description": "RAG-PHP Laravel integration — ServiceProvider, Facade, and Artisan commands",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "rag-php/core": "^0.1",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "orchestra/testbench": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RagPhp\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RagPhp\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RagPhp\\Laravel\\RagPhpServiceProvider"
+            ],
+            "aliases": {
+                "Rag": "RagPhp\\Laravel\\Facades\\Rag"
+            }
+        }
+    }
+}
